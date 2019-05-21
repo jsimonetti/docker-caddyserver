@@ -9,5 +9,6 @@ RUN apk --no-cache add tini git \
     apk del deps
 
 ENTRYPOINT ["tini"]
+EXPOSE 80/tcp 443/tcp
 
 CMD ["caddy", "--conf", "/Caddyfile"]
